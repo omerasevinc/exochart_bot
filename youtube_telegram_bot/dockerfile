@@ -18,5 +18,8 @@ COPY . .
 # Create temp directory
 RUN mkdir -p temp_frames
 
+# Verify FFmpeg installation
+RUN ffmpeg -version
+
 # Run the bot
 CMD ["python", "main.py"]
